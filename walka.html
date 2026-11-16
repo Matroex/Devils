@@ -356,40 +356,15 @@ button:hover{background:#a3854d}
  }
 }
 </style>
+<link rel="stylesheet" href="interfejs.css">
+<script src="interfejs.js" defer></script>
 </head>
 
-<body>
+<body data-devils-page="walka">
 
 <!-- MENU BOCZNE -->
 
-<nav id="sidebar" class="sidebar">
 
- <button class="menu-toggle" onclick="toggleMenu()">
-  ☰
- </button>
-
- <h2>⚔️ INTERFEJS</h2>
-
- <button class="menu-link" onclick="leaveBattle('pulpit.html')">
-  🏠 Pulpit
- </button>
-
- <button class="menu-link">🧙 Postać</button>
-
- <button class="menu-link active" onclick="leaveBattle('mapa.html')">
-  🗺️ Mapa
- </button>
-
- <button class="menu-link">🎒 Ekwipunek</button>
- <button class="menu-link">⚔️ PvP</button>
- <button class="menu-link">📬 Poczta</button>
- <button class="menu-link">🛡️ Gildia</button>
-
- <button class="menu-link" onclick="leaveBattle('postacie.html')">
-  👥 Wybór postaci
- </button>
-
-</nav>
 
 <main class="main">
 
@@ -631,6 +606,7 @@ function createEmptyEffects(container){
 ===================================== */
 
 function renderHero(){
+ window.devilsBattleVitals={hp:hero.hp,maxHp:hero.maxHp,mp:hero.mp,maxMp:hero.maxMp};
 
  document.getElementById("heroName").textContent=
   hero.name;

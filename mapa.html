@@ -856,45 +856,34 @@ body.menu-closed{padding-left:0}
 
 }
 
+/* POPRAWKA IKONKI INFORMACJI O DROP */
+.monster-info-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  padding: 0;
+  border: 1px solid #73674e;
+  border-radius: 50%;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
 </style>
 
+<link rel="stylesheet" href="interfejs.css">
+<script src="interfejs.js" defer></script>
 </head>
 
-<body>
+<body data-devils-page="mapa">
 
-<nav id="sidebar" class="sidebar">
 
- <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
- <h2>⚔️ INTERFEJS</h2>
-
- <button class="menu-link" onclick="goTo('pulpit.html')">
-
-  🏠 Pulpit
-
- </button>
-
- <button class="menu-link">🧙 Postać</button>
-
- <button class="menu-link active">🗺️ Mapa</button>
-
- <button class="menu-link" onclick="goTo('ekwipunek.html')">
-  🎒 Ekwipunek
-</button>
-
- <button class="menu-link">⚔️ PvP</button>
-
- <button class="menu-link">📬 Poczta</button>
-
- <button class="menu-link">🛡️ Gildia</button>
-
- <button class="menu-link" onclick="backToCharacters()">
-
-  👥 Wybór postaci
-
- </button>
-
-</nav>
 
 <main class="main">
 
@@ -1508,7 +1497,7 @@ function renderMonsters(){
 
   dropButton.className="monster-info-button";
 
-  dropButton.textContent="ⓘ";
+  dropButton.textContent="i";
 
   dropButton.title="Sprawdź możliwy drop";
 
